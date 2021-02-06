@@ -45,7 +45,7 @@ const MediaBlock = ({ classes }) => {
       </div>
       <div className={classes.mediaIndicator}>
         <img src={distrib}></img>
-        <strong>21</strong>
+        <strong>2</strong>
         <span>To distribute</span>
       </div>
       <div className={classes.mediaIndicator}>
