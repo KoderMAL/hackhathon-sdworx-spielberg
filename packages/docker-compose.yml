@@ -1,0 +1,43 @@
+version: "3.7"
+x-shared: &shared
+  stdin_open: true
+  tty: true
+services:
+    api:
+      image: api-together
+    build: .
+      networks:
+        - backend
+    ports:
+      - 3000:3000
+  client:
+    container_name: client-together
+    build: ./client
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client/src:/home/app/client/src
+      - ./client/public:/home/app/client/public
+  server:
+    build: ./nginx
+    depends_on:
+      - client
+      - api
+      - admin
+    ports:
+      - 80:80
+      - 443:443
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=psswrd
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=api_development
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
+    driver: local
+networks:
+  backend:
+    driver: bridge
