@@ -46,51 +46,29 @@ const messages = [
     id: 0,
     variant: "warning",
     name: "Jane Hew",
-    message: "Hey! How is it going?",
-    time: "9:32"
+    message: "Thanks for the review !",
+    time: "Cheers"
   },
   {
     id: 1,
     variant: "success",
     name: "Lloyd Brown",
-    message: "Check out my new Dashboard",
-    time: "9:18"
+    message: "Great work !",
+    time: "Cheers"
   },
   {
     id: 2,
     variant: "primary",
     name: "Mark Winstein",
-    message: "I want rearrange the appointment",
-    time: "9:15"
+    message: "Great meeting !",
+    time: "Badge"
   },
   {
     id: 3,
     variant: "secondary",
     name: "Liana Dutti",
-    message: "Good news from sale department",
-    time: "9:09"
-  }
-];
-
-const notifications = [
-  { id: 0, color: "warning", message: "Check out this awesome ticket" },
-  {
-    id: 1,
-    color: "success",
-    type: "info",
-    message: "What is the best way to get ..."
-  },
-  {
-    id: 2,
-    color: "secondary",
-    type: "notification",
-    message: "This is just a simple notification"
-  },
-  {
-    id: 3,
-    color: "primary",
-    type: "e-commerce",
-    message: "12 new orders has arrived today"
+    message: "Thank you for the report",
+    time: "Cheers"
   }
 ];
 
@@ -106,8 +84,6 @@ export default function Header(props) {
   // local
   var [mailMenu, setMailMenu] = useState(null);
   var [isMailsUnread, setIsMailsUnread] = useState(true);
-  var [notificationsMenu, setNotificationsMenu] = useState(null);
-  var [isNotificationsUnread, setIsNotificationsUnread] = useState(true);
   var [profileMenu, setProfileMenu] = useState(null);
   var [isSearchOpen, setSearchOpen] = useState(false);
   const [isSmall, setSmall] = useState(false);
@@ -185,23 +161,6 @@ export default function Header(props) {
           aria-haspopup="true"
           aria-controls="mail-menu"
           onClick={e => {
-            setNotificationsMenu(e.currentTarget);
-            setIsNotificationsUnread(false);
-          }}
-          className={classes.headerMenuButton}
-        >
-          <Badge
-            badgeContent={isNotificationsUnread ? notifications.length : null}
-            color="warning"
-          >
-            <NotificationsIcon classes={{ root: classes.headerIcon }} />
-          </Badge>
-        </IconButton>
-        <IconButton
-          color="inherit"
-          aria-haspopup="true"
-          aria-controls="mail-menu"
-          onClick={e => {
             setMailMenu(e.currentTarget);
             setIsMailsUnread(false);
           }}
@@ -211,7 +170,7 @@ export default function Header(props) {
             badgeContent={isMailsUnread ? messages.length : null}
             color="secondary"
           >
-            <MailIcon classes={{ root: classes.headerIcon }} />
+            <NotificationsIcon classes={{ root: classes.headerIcon }} />
           </Badge>
         </IconButton>
         <IconButton
@@ -249,14 +208,14 @@ export default function Header(props) {
         >
           <div className={classes.profileMenuUser}>
             <Typography variant="h4" weight="medium">
-              New Messages
+              New Cheers
             </Typography>
             <Typography
               className={classes.profileMenuLink}
               component="a"
               color="secondary"
             >
-              {messages.length} New Messages
+              You got {messages.length} new Cheers !
             </Typography>
           </div>
           {messages.map(message => (
@@ -281,15 +240,6 @@ export default function Header(props) {
               </div>
             </MenuItem>
           ))}
-          <Fab
-            variant="extended"
-            color="primary"
-            aria-label="Add"
-            className={classes.sendMessageButton}
-          >
-            Send New Message
-            <SendIcon className={classes.sendButtonIcon} />
-          </Fab>
         </Menu>
         <Menu
           id="profile-menu"
