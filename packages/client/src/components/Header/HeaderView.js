@@ -104,7 +104,7 @@ const Header = ({ classes, isSidebarOpened, toggleSidebar, ...props }) => (
         )}
       </IconButton>
       <Typography variant="h6" weight="medium" className={classes.logotype}>
-        React Material Admin
+        Sykx Lab - Worx Together
       </Typography>
       <div className={classes.grow} />
       <div
