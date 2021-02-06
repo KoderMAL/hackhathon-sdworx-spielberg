@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { useTheme, makeStyles } from "@material-ui/styles";
 
-import { Badge } from '../../components/Wrappers';
 import Tabs from './Components/Tabs';
 import Donut from './Components/DonutChart';
 import MediaBlock from './Components/MediaBlock';
@@ -40,7 +39,7 @@ function Profile() {
                 <Typography variant="h3" className={classes.profileTitle}>
                   Selim Lalaoui
                 </Typography>
-                <span className={classes.profileSubtitle}>Hackhaton amateur</span>
+                <span className={classes.profileSubtitle}>Architect</span>
                 <a className={classes.profileExternalRes} href="https://sykxlab.com">sykxlab.com</a>
                 <div>
                 </div>
@@ -69,7 +68,7 @@ function Profile() {
           <Grid item xs={12} sm={4} md={4} lg={6}>
             <Widget widgetWithDropdown
               bodyClass={classes.mediaBlockPadding}
-              title="Media"
+              title="Cheers"
             >
               <Grid container spacing={1}>
                 <MediaBlock />

@@ -1,10 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-import DocIcon from '../Icons/DocIcon';
-import ProjectIcon from '../Icons/ProjectIcon';
-import UsersIcon from '../Icons/UsersIcon';
-import FollowIcon from '../Icons/FollowIcon';
+import cheers from '../../../images/profile/cheers.svg'
+import distrib from '../../../images/profile/distrib.svg'
+import rank from '../../../images/profile/rank.svg'
+import bu from '../../../images/profile/bu.svg'
 
 const styles = (theme) => ({
   mediaIndicator: {
@@ -39,24 +39,24 @@ const MediaBlock = ({ classes }) => {
   return (
     <div className={classes.mediaIconsWrapper}>
       <div className={classes.mediaIndicator}>
-        <DocIcon/>
+        <img src={cheers}></img>
         <strong className={classes.valueLabel}>194</strong>
-        <span>Posts</span>
+        <span>Received</span>
       </div>
       <div className={classes.mediaIndicator}>
-        <ProjectIcon />
-        <strong>554</strong>
-        <span>Projects</span>
+        <img src={distrib}></img>
+        <strong>21</strong>
+        <span>To distribute</span>
       </div>
       <div className={classes.mediaIndicator}>
-        <UsersIcon />
-        <strong>12.8k</strong>
-        <span>Followers</span>
+        <img src={bu}></img>
+        <strong>970</strong>
+        <span>Business unit</span>
       </div>
       <div className={classes.mediaIndicator}>
-        <FollowIcon />
-        <strong>1.1k</strong>
-        <span>Following</span>
+        <img src={rank}></img>
+        <strong>2nd</strong>
+        <span>Team Rank</span>
       </div>
     </div>
   )
