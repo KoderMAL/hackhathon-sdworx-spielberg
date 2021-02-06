@@ -103,7 +103,7 @@ export default function Header(props) {
   }
 
   return (
-    <AppBar position="fixed" className={classes.appBar}>
+    <AppBar position="fixed" className={classes.appBar} style={{background: 'linear-gradient(to right,#942d53,#e53e36)'}}>
       <Toolbar className={classes.toolbar}>
         <IconButton
           color="inherit"
