@@ -6,16 +6,14 @@ import {
   InputBase,
   Menu,
   MenuItem,
-  Fab
+  Grid
 } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
 import {
   Menu as MenuIcon,
-  MailOutline as MailIcon,
   NotificationsNone as NotificationsIcon,
   Person as AccountIcon,
   Search as SearchIcon,
-  Send as SendIcon,
   ArrowBack as ArrowBackIcon
 } from "@material-ui/icons";
 import classNames from "classnames";
@@ -23,6 +21,7 @@ import {
   Redirect
 } from "react-router-dom";
 
+import sykxLabLogo from "../../images/worxtogether-logo.png"
 
 //images
 import profile from "../../images/JDP_7014.jpg";
@@ -129,9 +128,9 @@ export default function Header(props) {
             />
           )}
         </IconButton>
-        <Typography variant="h6" weight="medium" className={classes.logotype}>
-          Sykx Lab Worx Together
-        </Typography>
+      <Grid container justify="left">
+          <img style={{ maxWidth: "170px" }} src={sykxLabLogo} />
+      </Grid>
         <div className={classes.grow} />
         <div
           className={classNames(classes.search, {
