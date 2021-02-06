@@ -1,18 +1,18 @@
 import React from 'react';
+import { Grid } from '@material-ui/core'
 import { withStyles, useTheme } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import FolderBlue from '../Icons/FolderBlue';
-import FolderBlueDark from '../Icons/FolderBlueDark';
-import FolderRed from '../Icons/FolderRed';
-import FolderRedDark from '../Icons/FolderRedDark';
-import FolderGreen from '../Icons/FolderGreen';
-import FolderGreenDark from '../Icons/FolderGreenDark';
-import FolderYellow from '../Icons/FolderYellow';
-import FolderYellowDark from '../Icons/FolderYellowDark';
 import SwipeableViews from 'react-swipeable-views';
 import Box from '@material-ui/core/Box';
+
+import mentor from '../../../images/profile/mentor.svg'
+import seniority from '../../../images/profile/seniority.svg'
+import ponctuality from '../../../images/profile/ponctuality.svg'
+import content from '../../../images/profile/content.svg'
+import challenge from '../../../images/profile/challenge.svg'
+import confluence from '../../../images/profile/confluence.svg'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -124,52 +124,90 @@ function CustomizedTabs({ classes }) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel>
-          <span className={classes.folderWrapper}>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="Mentor" label="times" value={17} /> 
-              : <FolderBlue title="Mentor" label="times" value={17} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderRedDark title="Seniority" label="years" value={7} /> 
-              : <FolderRed title="Seniority" label="years" value={7} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderGreenDark title="Ponctuality" label="badges" value={54} /> 
-              : <FolderGreen title="Ponctuality" label="badges" value={54} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderYellowDark title="Content" label="badges" value={81} /> 
-              : <FolderYellow title="Content" label="badges" value={81} />
-            }
-          </div>
-          </span>
+          <Grid container direction="row">
+          <Grid container xs={3} direction='column' alignItems='center'>
+            <Grid>
+              <img src={mentor}></img>
+            </Grid>
+            <Grid>
+              <strong className={classes.valueLabel}>Mentor</strong>
+            </Grid>
+            <Grid>              
+              <span>17 times</span>
+            </Grid>
+
+          </Grid>
+
+          <Grid container xs={3} direction='column' alignItems='center'>
+            <Grid>
+              <img src={seniority}></img>
+            </Grid>
+            <Grid>
+              <strong className={classes.valueLabel}>Seniority</strong>
+            </Grid>
+            <Grid>              
+              <span>7 years</span>
+            </Grid>
+
+          </Grid>
+
+          <Grid container xs={3} direction='column' alignItems='center'>
+            <Grid>
+              <img src={ponctuality}></img>
+            </Grid>
+            <Grid>
+              <strong className={classes.valueLabel}>Poctuality</strong>
+            </Grid>
+            <Grid>              
+              <span>7 badges</span>
+            </Grid>
+
+          </Grid>
+
+          <Grid container xs={3} direction='column' alignItems='center'>
+            <Grid>
+              <img src={content}></img>
+            </Grid>
+            <Grid>
+              <strong className={classes.valueLabel}>Content</strong>
+            </Grid>
+            <Grid>              
+              <span>7 badges</span>
+            </Grid>
+
+          </Grid>
+          </Grid>
+        </TabPanel>
+
+        <TabPanel>
+        <Grid container direction="row">
+          <Grid container xs={3} direction='column' alignItems='center'>
+              <Grid>
+                <img src={challenge}></img>
+              </Grid>
+              <Grid>
+                <strong className={classes.valueLabel}>Monthly Challenges</strong>
+              </Grid>
+              <Grid>              
+                <span>14 badges</span>
+              </Grid>
+            </Grid>
+          </Grid>
         </TabPanel>
         <TabPanel>
-        <span className={classes.folderWrapper}>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="Monthly Challenges" label="files" value={4} /> 
-              : <FolderBlue title="Monthly Challenges" label="files" value={4} />
-            }
-          </div>
-          </span>
-        </TabPanel>
-        <TabPanel>
-          <span className={classes.folderWrapper}>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="Confluence" label="likes" value={323} /> 
-              : <FolderBlue title="Confluence" label="likes" value={323} />
-            }
-          </div>
-          </span>
+        <Grid container direction="row">
+          <Grid container xs={3} direction='column' alignItems='center'>
+              <Grid>
+                <img src={confluence}></img>
+              </Grid>
+              <Grid>
+                <strong className={classes.valueLabel}>Confluence</strong>
+              </Grid>
+              <Grid>
+                <span>323 likes</span>
+              </Grid>
+            </Grid>
+          </Grid>
         </TabPanel>
       </SwipeableViews>
     </div>

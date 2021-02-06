@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, LinearProgress } from "@material-ui/core";
 import { useTheme, makeStyles } from "@material-ui/styles";
 
 import Tabs from './Components/Tabs';
@@ -42,6 +42,13 @@ function Profile() {
                 <span className={classes.profileSubtitle}>Architect</span>
                 <a className={classes.profileExternalRes} href="https://sykxlab.com">sykxlab.com</a>
                 <div>
+                  Level 34
+                <LinearProgress
+                variant="determinate"
+                value={34}
+                className={classes.progress}
+            />
+
                 </div>
                 <div className={classes.socials}>
                   <a href="#"><img src={FacebookIcon} alt="FacebookIcon" /></a>
