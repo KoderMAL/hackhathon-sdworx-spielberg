@@ -15,7 +15,8 @@ import useStyles from "./styles";
 
 // logo
 import logo from "./logo.svg";
-import google from "../../images/google.svg";
+import sdlogo from "../../images/sdlogo.png"
+import wtlogo from '../../images/worxtogether-logo.png'
 
 // context
 import { useUserDispatch, loginUser } from "../../context/UserContext";
@@ -63,9 +64,8 @@ function Login(props) {
 
   return (
     <Grid container className={classes.container}>
-      <div className={classes.logotypeContainer}>
-        <img src={logo} alt="logo" className={classes.logotypeImage} />
-        <Typography className={classes.logotypeText}>Worx Together</Typography>
+      <div className={classes.logotypeContainer} style={{background:'linear-gradient(to right,#e53e36 0.1%,#b04148ff 25%, #942d53 98%)'}}>
+        <img src={wtlogo} alt="logo" className={classes.logotypeImage} />
       </div>
       <div className={classes.formContainer}>
         <div className={classes.form}>
@@ -81,25 +81,6 @@ function Login(props) {
           </Tabs>
           {activeTabId === 0 && (
             <React.Fragment>
-              {config.isBackend ? (
-                <Widget
-                  disableWidgetMenu
-                  inheritHeight
-                  style={{ marginTop: 32 }}
-                >
-                  <Typography
-                    variant={"body2"}
-                    block
-                    style={{ textAlign: "center" }}
-                  >
-                    This is a real app with Node.js backend - use
-                    <Typography variant={"body2"} weight={"bold"}>
-                      "admin@sykxlab.com / password"
-                    </Typography>{" "}
-                    to login!
-                  </Typography>
-                </Widget>
-              ) : null}
               <Typography variant="h1" className={classes.greeting}>
                 {getGreeting()}, User
               </Typography>
@@ -118,12 +99,10 @@ function Login(props) {
                   )
                 }
               >
-                <img src={google} alt="google" className={classes.googleIcon} />
-                &nbsp;Sign in with Google
+                <img src={sdlogo} alt="sd" className={classes.googleIcon} />
+                &nbsp;Sign in with SD Worx
               </Button>
               <div className={classes.formDividerContainer}>
-                <div className={classes.formDivider} />
-                <Typography className={classes.formDividerWord}>or</Typography>
                 <div className={classes.formDivider} />
               </div>
               <Fade
@@ -136,69 +115,6 @@ function Login(props) {
                   Something is wrong with your login or password :(
                 </Typography>
               </Fade>
-              <Input
-                id="email"
-                InputProps={{
-                  classes: {
-                    underline: classes.InputUnderline,
-                    input: classes.Input
-                  }
-                }}
-                value={loginValue}
-                onChange={e => setLoginValue(e.target.value)}
-                margin="normal"
-                placeholder="Email Adress"
-                type="email"
-                fullWidth
-              />
-              <Input
-                id="password"
-                InputProps={{
-                  classes: {
-                    underline: classes.InputUnderline,
-                    input: classes.Input
-                  }
-                }}
-                value={passwordValue}
-                onChange={e => setPasswordValue(e.target.value)}
-                margin="normal"
-                placeholder="Password"
-                type="password"
-                fullWidth
-              />
-              <div className={classes.formButtons}>
-                {isLoading ? (
-                  <CircularProgress size={26} className={classes.loginLoader} />
-                ) : (
-                  <Button
-                    disabled={
-                      loginValue.length === 0 || passwordValue.length === 0
-                    }
-                    onClick={() =>
-                      loginUser(
-                        userDispatch,
-                        loginValue,
-                        passwordValue,
-                        props.history,
-                        setIsLoading,
-                        setError
-                      )
-                    }
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                  >
-                    Login
-                  </Button>
-                )}
-                <Button
-                  color="primary"
-                  size="large"
-                  className={classes.forgetButton}
-                >
-                  Forgot Password?
-                </Button>
-              </div>
             </React.Fragment>
           )}
           {activeTabId === 1 && (
@@ -291,30 +207,7 @@ function Login(props) {
               </div>
               <div className={classes.formDividerContainer}>
                 <div className={classes.formDivider} />
-                <Typography className={classes.formDividerWord}>or</Typography>
-                <div className={classes.formDivider} />
               </div>
-              <Button
-                size="large"
-                className={classnames(
-                  classes.googleButton,
-                  classes.googleButtonCreating
-                )}
-                onClick={() =>
-                  loginUser(
-                    userDispatch,
-                    loginValue,
-                    passwordValue,
-                    props.history,
-                    setIsLoading,
-                    setError,
-                    "google"
-                  )
-                }
-              >
-                <img src={google} alt="google" className={classes.googleIcon} />
-                &nbsp;Sign in with Google
-              </Button>
             </React.Fragment>
           )}
         </div>
