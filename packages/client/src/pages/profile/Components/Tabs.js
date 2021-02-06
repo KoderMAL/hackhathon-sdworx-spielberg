@@ -106,13 +106,6 @@ function CustomizedTabs({ classes }) {
     setIndex(index)
   }
 
-  function a11yProps(index) {
-    return {
-      id: `full-width-tab-${index}`,
-      'aria-controls': `full-width-tabpanel-${index}`,
-    };
-  }
-
   const theme = useTheme();
 
   return (
@@ -122,7 +115,7 @@ function CustomizedTabs({ classes }) {
         onChange={handleChange}
       >
         <AntTab value={0} label="Work" />
-        <AntTab value={1} label="Private" />
+        <AntTab value={1} label="Events" />
         <AntTab value={2} label="Social" />
       </AntTabs>
       <SwipeableViews
@@ -134,26 +127,36 @@ function CustomizedTabs({ classes }) {
           <span className={classes.folderWrapper}>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="UI/UX" label="files" value={178} /> 
-              : <FolderBlue title="UI/UX" label="files" value={178} />
+              ? <FolderBlueDark title="Mentor" label="times" value={17} /> 
+              : <FolderBlue title="Mentor" label="times" value={17} />
             }
           </div>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderRedDark title="Design" label="files" value={154} /> 
-              : <FolderRed title="Design" label="files" value={154} />
+              ? <FolderRedDark title="Seniority" label="years" value={7} /> 
+              : <FolderRed title="Seniority" label="years" value={7} />
             }
           </div>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderGreenDark title="Mobile" label="files" value={98} /> 
-              : <FolderGreen title="Mobile" label="files" value={98} />
+              ? <FolderGreenDark title="Ponctuality" label="cheers" value={98} /> 
+              : <FolderGreen title="Ponctuality" label="cheers" value={98} />
             }
           </div>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderYellowDark title="Illustration" label="files" value={154} /> 
-              : <FolderYellow title="Illustration" label="files" value={154} />
+              ? <FolderYellowDark title="Content" label="cheers" value={62} /> 
+              : <FolderYellow title="Content" label="cheers" value={62} />
+            }
+          </div>
+          </span>
+        </TabPanel>
+        <TabPanel>
+        <span className={classes.folderWrapper}>
+          <div>
+            {theme.palette.type === "dark" 
+              ? <FolderBlueDark title="Monthly Challenges" label="files" value={4} /> 
+              : <FolderBlue title="Monthly Challenges" label="files" value={4} />
             }
           </div>
           </span>
@@ -162,54 +165,8 @@ function CustomizedTabs({ classes }) {
           <span className={classes.folderWrapper}>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="UI/UX" label="files" value={178} /> 
-              : <FolderBlue title="UI/UX" label="files" value={178} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderRedDark title="Design" label="files" value={154} /> 
-              : <FolderRed title="Design" label="files" value={154} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderGreenDark title="Mobile" label="files" value={98} /> 
-              : <FolderGreen title="Mobile" label="files" value={98} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderYellowDark title="Illustration" label="files" value={154} /> 
-              : <FolderYellow title="Illustration" label="files" value={154} />
-            }
-          </div>
-          </span>
-        </TabPanel>
-        <TabPanel>
-          <span className={classes.folderWrapper}>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="UI/UX" label="files" value={178} /> 
-              : <FolderBlue title="UI/UX" label="files" value={178} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderRedDark title="Design" label="files" value={154} /> 
-              : <FolderRed title="Design" label="files" value={154} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderGreenDark title="Mobile" label="files" value={98} /> 
-              : <FolderGreen title="Mobile" label="files" value={98} />
-            }
-          </div>
-          <div>
-            {theme.palette.type === "dark" 
-              ? <FolderYellowDark title="Illustration" label="files" value={154} /> 
-              : <FolderYellow title="Illustration" label="files" value={154} />
+              ? <FolderBlueDark title="Monthly Challenges" label="files" value={4} /> 
+              : <FolderBlue title="Monthly Challenges" label="files" value={4} />
             }
           </div>
           </span>
