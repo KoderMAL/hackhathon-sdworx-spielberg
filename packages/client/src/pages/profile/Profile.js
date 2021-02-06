@@ -78,7 +78,7 @@ function Profile() {
           <Grid item xs={12} sm={4} md={4} lg={6}>
             <Widget widgetWithDropdown
               className={classes.adjustHeight}
-              title="Projects"
+              title="Team badges"
             >
               <Donut />
             </Widget>

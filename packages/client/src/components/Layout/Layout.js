@@ -30,7 +30,6 @@ import { Link, Typography } from '../../components/Wrappers'
 
 // pages
 import Dashboard from '../../pages/dashboard'
-import AnotherPage from '../../pages/another-page'
 import Profile from '../../pages/profile'
 import ProductsGrid from '../../pages/ecommerce/ProductsGrid'
 import UserList from '../../pages/user'
@@ -184,7 +183,6 @@ function Layout(props) {
                 <Switch>
                     <Route path="/app/dashboard" component={Dashboard} />
                     <Route path="/app/profile" component={Profile} />
-                    <Route path={"/app/another-page"} component={AnotherPage}/>
                     <Route
                         path="/app/ecommerce/gridproducts"
                         component={ProductsGrid}

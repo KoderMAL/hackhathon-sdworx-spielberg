@@ -14,7 +14,7 @@ export default makeStyles(theme => ({
   },
   progress: {
     marginBottom: theme.spacing(1),
-    backgroundColor: theme.palette.primary.main
+    backgroundColor: 'rgb(236, 236, 236)',
   },
   pieChartLegendWrapper: {
     height: "100%",
@@ -48,6 +48,18 @@ export default makeStyles(theme => ({
   },
   progressBar: {
     backgroundColor: theme.palette.warning.main
+  },
+  progressBarPrimary: {
+    backgroundColor: theme.palette.primary.main,
+  },
+  progressBarWarning: {
+    backgroundColor: theme.palette.warning.main,
+  },
+  progressBarRed: {
+    backgroundColor: 'red',
+  },
+  progressBarGreen: {
+    backgroundColor: 'green',
   },
   performanceLegendWrapper: {
     display: "flex",
@@ -136,7 +148,7 @@ export default makeStyles(theme => ({
       right: 4
     }
   },
-  checkboxColor: {
-    color: "rgb(185, 185, 185)"
+  actionsIcon: {
+    color: "#76767B"
   }
 }));

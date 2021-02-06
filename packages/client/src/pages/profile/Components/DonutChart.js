@@ -12,10 +12,10 @@ import {
 import chartsData from './mock';
 
 const PieChartData = [
-  { name: "New", value: 400 ,color: "#536DFE" },
-  { name: "In Progress", value: 300 ,color: "#FFC35F" },
-  { name: "Completed", value: 300 ,color: "#3CD4A0" },
-  { name: "Cancel", value: 200 ,color: "#FF5C93" }
+  { name: "Content", value: 400 ,color: "#536DFE" },
+  { name: "Ponctuality", value: 300 ,color: "#FFC35F" },
+  { name: "Mentor", value: 300 ,color: "#3CD4A0" },
+  { name: "Interactivity", value: 200 ,color: "#FF5C93" }
 ];
 
 const styles = (theme) => ({
@@ -62,7 +62,7 @@ const DonutChart = ({ classes }) => {
           variant={"caption"}
           style={{ position: "absolute", top: 60, fontWeight: "bold", fontSize: 18 }}
         >
-          121
+          532
         </Typography>
         <ResponsiveContainer width="100%" height={150}>
           <PieChart>

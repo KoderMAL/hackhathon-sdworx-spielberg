@@ -25,7 +25,6 @@ const structure = [
     { id: 0, label: 'Dashboard', link: '/app/dashboard', icon: <HomeIcon /> },
     { id: 100, label: 'Profile', link: '/app/profile', icon: <ProfileIcon /> },
     { id: 7, label: 'Rewards', link: '/app/ecommerce/gridproducts', icon: <ShoppingCartIcon /> },
-    { id: 1, label: 'Another Page', link: '/app/another-page', icon: <DocumentationIcon /> },
     { id: 2, type: 'divider' },
     { id: 3, type: 'title', label: 'HELP' },
     { id: 4, label: 'Library', link: '', icon: <LibraryIcon /> },

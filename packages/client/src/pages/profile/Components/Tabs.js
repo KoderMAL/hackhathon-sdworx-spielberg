@@ -139,14 +139,14 @@ function CustomizedTabs({ classes }) {
           </div>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderGreenDark title="Ponctuality" label="cheers" value={98} /> 
-              : <FolderGreen title="Ponctuality" label="cheers" value={98} />
+              ? <FolderGreenDark title="Ponctuality" label="badges" value={54} /> 
+              : <FolderGreen title="Ponctuality" label="badges" value={54} />
             }
           </div>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderYellowDark title="Content" label="cheers" value={62} /> 
-              : <FolderYellow title="Content" label="cheers" value={62} />
+              ? <FolderYellowDark title="Content" label="badges" value={81} /> 
+              : <FolderYellow title="Content" label="badges" value={81} />
             }
           </div>
           </span>
@@ -165,8 +165,8 @@ function CustomizedTabs({ classes }) {
           <span className={classes.folderWrapper}>
           <div>
             {theme.palette.type === "dark" 
-              ? <FolderBlueDark title="Monthly Challenges" label="files" value={4} /> 
-              : <FolderBlue title="Monthly Challenges" label="files" value={4} />
+              ? <FolderBlueDark title="Confluence" label="likes" value={323} /> 
+              : <FolderBlue title="Confluence" label="likes" value={323} />
             }
           </div>
           </span>
