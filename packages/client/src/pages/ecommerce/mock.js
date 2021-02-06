@@ -1,106 +1,58 @@
 //images
-import img1 from "../../images/img1.jpg";
+import img1 from "../../images/img1.png";
 import img2 from "../../images/img2.jpg";
 import img3 from "../../images/img3.jpg";
 import img4 from "../../images/img4.jpg";
-import img5 from "../../images/img5.jpeg";
+import img5 from "../../images/img5.jpg";
 import img6 from "../../images/img6.jpg";
 
 export const rows = [
   {
     id: 1,
     img: img1,
-    title: "Trainers",
-    subtitle: "Trainers In White",
-    price: 80,
+    title: "10€ Voucher",
+    subtitle: "Decathlon",
+    price: 30,
     rating: 4.6
   },
   {
     id: 2,
     img: img2,
-    title: "Boots",
-    subtitle: "Trainers In Blue",
-    price: 37,
+    title: "Candles",
+    subtitle: "Baobab",
+    price: 80,
     rating: 4.6
   },
   {
     id: 3,
     img: img3,
-    title: "Flat sandals",
-    subtitle: "Trainers In White",
-    price: 70,
+    title: "Wellness",
+    subtitle: "2-hour massage",
+    price: 100,
     rating: 4.6
   },
   {
     id: 4,
     img: img4,
-    title: "Trainers",
-    subtitle: "Trainers In Blue",
-    price: 85,
+    title: "Dinner in restaurant",
+    subtitle: "Bonbon Brussels",
+    price: 430,
     rating: 4.6
   },
   {
     id: 5,
     img: img5,
-    title: "Flat sandals",
-    subtitle: "Trainers In White",
-    price: 12,
+    title: "Department team building",
+    subtitle: "Escape room",
+    price: 220,
     rating: 4.6
   },
   {
     id: 6,
     img: img6,
-    title: "Trainers",
-    subtitle: "Trainers In Blue",
-    price: 76,
-    rating: 4.6
-  },
-  {
-    id: 7,
-    img: img1,
-    title: "Boots",
-    subtitle: "Trainers In White",
-    price: 76,
-    rating: 4.6
-  },
-  {
-    id: 8,
-    img: img2,
-    title: "Flat sandals",
-    subtitle: "Trainers In White",
-    price: 76,
-    rating: 4.6
-  },
-  {
-    id: 9,
-    img: img3,
-    title: "Trainers",
-    subtitle: "Trainers In White",
-    price: 76,
-    rating: 4.6
-  },
-  {
-    id: 10,
-    img: img4,
-    title: "Boots",
-    subtitle: "Trainers In Blue",
-    price: 76,
-    rating: 4.6
-  },
-  {
-    id: 11,
-    img: img5,
-    title: "Trainers",
-    subtitle: "Trainers In White",
-    price: 71,
-    rating: 4.6
-  },
-  {
-    id: 12,
-    img: img6,
-    title: "Flat sandals",
-    subtitle: "Trainers In Blue",
-    price: 76,
+    title: "Become a CEO",
+    subtitle: "One day exclusive deal !!!",
+    price: 10000000,
     rating: 4.6
   }
 ];

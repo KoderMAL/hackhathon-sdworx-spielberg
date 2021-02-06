@@ -312,9 +312,7 @@ const Product = props => {
                       >
                         {c.id % 2 ? (
                           <Chip label={"New"} color={"success"} />
-                        ) : (
-                          <Chip label={"Sale"} color={"secondary"} />
-                        )}
+                        ) : ""}
                       </CardMedia>
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -337,15 +335,8 @@ const Product = props => {
                         alignItems="center"
                         width={"100%"}
                       >
-                        <Typography weight={"bold"}>${c.price}</Typography>
-                        <Typography block>
-                          <div style={{ color: yellow[700] }}>
-                            {rows[0].rating}
-                            <StarIcon
-                              style={{ color: yellow[700], marginTop: -5 }}
-                            />
-                          </div>
-                        </Typography>
+                        <Typography weight={"bold"}>{c.price} pts</Typography>
+                  
                       </Box>
                     </CardActions>
                   </Card>
