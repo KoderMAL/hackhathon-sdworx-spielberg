@@ -1,3 +1,3 @@
 Worx Together
 
-Hackhathon Spielberg X SDWorx X Sykx Lab
+Hackhathon Spilberg X SDWorx X Sykx Lab
