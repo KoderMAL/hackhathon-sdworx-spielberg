@@ -116,7 +116,7 @@ function CustomizedTabs({ classes }) {
       >
         <AntTab value={0} label="Work" />
         <AntTab value={1} label="Events" />
-        <AntTab value={2} label="Social" />
+        <AntTab value={2} label="Knowledge" />
       </AntTabs>
       <SwipeableViews
         index={index}
